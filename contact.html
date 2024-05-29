@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Henry Unah Portfolio Website</title>
+    <title>Henry Odohi Unah Portfolio Website</title>
 
     <!-- Meta -->
     <meta charset="utf-8" />
@@ -23,6 +23,17 @@
 
     <!-- Theme CSS -->
     <link id="theme-style" rel="stylesheet" href="assets/css/theme-7.css" />
+    <!-- EmailJS SDK -->
+    <script type="text/javascript" src="./assets/js/sendEmail.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init('8bsz2N04f_kyVZSNj');
+      })();
+    </script>
   </head>
 
   <body>
@@ -165,7 +176,7 @@
             id="contact-form"
             class="contact-form col-lg-8 mx-lg-auto"
             method="post"
-            action=""
+            onsubmit="sendMail(event)"
           >
             <h3 class="text-center mb-3">Get In Touch</h3>
             <div class="form-row">
