@@ -13,8 +13,8 @@ function sendMail(event){
         document.getElementById('cname').value = '';
         document.getElementById('cemail').value = '';
         document.getElementById('cmessage').value = '';
-        alert('Sent!');
+        bootbox.alert('Thank you for your message!');
     }).catch(err => {
-        alert(JSON.stringify(err));
+        bootbox.alert(JSON.stringify(err));
     });
 }
